@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor de texto</title>
+</head>
+<body>
+    <h1>Editor de Texto</h1>
+    <form action="pm" method="POST">
+        <textarea id="ta" cols="69" rows="10"></textarea>
+    </form>
+    <br>
+    <button type="button" onclick="pmaiuscula()">Pimeira maiúscula</button>
+    <button type="button" onclick="tdmaiuscula()">Todas maiúsculas</button>
+    <button type="button" onclick="pminuscula()">Pimeira minúscula</button>
+    <button type="button" onclick="tdminuscula()">Todas minúsculas</button>
+    <br>
+    <button type="button" onclick="maiusculaporpalavra()">Primeira letra maiúscula por palavra</button>
+    <button type="button" onclick="minusculaporpalavra()">Primeira letra minúscula por palavra</button>
+    <button type="button" onclick="negrito()">Negrito</button>
+    <button type="button" onclick="italico()">Italico</button>
+    <button type="button" onclick="padrao()">Padrão</button>
+    <script>
+        function pmaiuscula(){
+            textovalor = document.getElementById('ta')
+            texto = document.getElementById('ta').value
+            textovalor.value = texto.charAt(0).toUpperCase() + texto.slice(1)
+        }
+        function tdmaiuscula(){
+            textovalor = document.getElementById('ta')
+            texto = document.getElementById('ta').value
+            textovalor.value = texto.toUpperCase()
+        }
+        function pminuscula(){
+            textovalor = document.getElementById('ta')
+            texto = document.getElementById('ta').value
+            textovalor.value = texto.charAt(0).toLowerCase() + texto.slice(1)
+        }
+        function tdminuscula(){
+            textovalor = document.getElementById('ta')
+            texto = document.getElementById('ta').value
+            textovalor.value = texto.toLowerCase()
+        }
+        function maiusculaporpalavra(){
+            texto = document.getElementById('ta').value
+            textovalor = document.getElementById('ta')
+            var palavra = texto.toLowerCase().split(" ")
+            for (var cont=0; cont < palavra.length; cont = cont + 1){
+                var p = palavra[cont]
+                palavra[cont] = p[0].toUpperCase() + p.slice(1)
+            }
+            texto = palavra.join(" ")
+            textovalor.value = texto
+        }
+        function minusculaporpalavra(){
+            texto = document.getElementById('ta').value
+            textovalor = document.getElementById('ta')
+            var palavra = texto.toUpperCase().split(" ")
+            for (var cont = 0; cont < palavra.length; cont = cont + 1){
+                var p = palavra[cont]
+                palavra[cont] = p[0].toLowerCase() + p.split(1)
+            }
+            texto = palavra.join(" ")
+            textovalor.value = texto
+        }
+        function negrito(){
+            texto = document.getElementById('ta').style.fontWeight = 'bolder'
+        }
+        function italico(){
+            texto = document.getElementById('ta').style.fontStyle = 'italic'
+        }
+        function padrao(){
+            texto = document.getElementById('ta').style.fontWeight = 'lighter'
+            texto = document.getElementById('ta').style.fontStyle = 'normal'
+        }
+    </script>
+</body>
+</html>
