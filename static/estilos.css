@@ -1,0 +1,75 @@
+.titulo{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+}
+.divisao{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 500px;
+    background-color: rgb(16, 194, 75);
+}
+textarea{
+    resize: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    size: none;
+}
+.pmaiuscula{
+    position: absolute;
+    top: 58%;
+    left: 18.4%;
+}
+.tmaiuscula{
+    position: absolute;
+    top: 58%;
+    left: 34.5%;
+}
+.pminuscula{
+    position: absolute;
+    top: 58%;
+    left: 54.8%;
+}
+.tminuscula{
+    position: absolute;
+    top: 58%;
+    left: 75.4%;
+}
+.plmaiuscula{
+    position: absolute;
+    top: 63%;
+    left: 18.4%;
+}
+.plminuscula{
+    position: absolute;
+    top: 63%;
+    left: 53.5%;
+}
+.negrito{
+    position: absolute;
+    top: 24.5%;
+    left: 86.5%;
+    transform: translate(-50%, 0%);
+    font-weight: bolder;
+}
+.italico{
+    position: absolute;
+    top: 38%;
+    left: 86.5%;
+    transform: translate(-50%, 0%);
+    font-style: italic;
+}
+.padrao{
+    position: absolute;
+    top: 51.5%;
+    left: 86.5%;
+    transform: translate(-50%, 0%);
+}
